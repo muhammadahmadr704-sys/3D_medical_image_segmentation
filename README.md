@@ -20,6 +20,7 @@ The project was inspired by:
 - nnU-Net
 
 and focuses heavily on: 
+
 -data centric experimentation
 -optimisation stability
 - patch-based volumetric training
