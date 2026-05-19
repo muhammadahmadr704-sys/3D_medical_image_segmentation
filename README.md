@@ -71,7 +71,7 @@ Dataset/
 
 ---
 
-# Motivation: Memory-Constrained 3D Training
+# Memory-Constrained 3D Training
 
 Full-volume 3D medical segmentation is computationally expensive due to the cubic scaling of 3D convolutions.
 
