@@ -115,10 +115,6 @@ The final best-performing model used:
 
 ---
 
-# Architecture Diagram
-
-
-
 # Training Pipeline
 
 ## Preprocessing
@@ -134,49 +130,6 @@ The final best-performing model used:
 - patch-based training
 - Dice + Cross Entropy hybrid loss
 - batch size = 1
-
----
-
-# Experiments and Ablation Studies
-
-Several architectural and optimisation strategies were investigated.
-
-## Architecture & Inference Improvements
-
-| Method | Mean Dice | Class 4 Dice |
-|---|---|---|
-| Patch96 + DiceCE | 0.803 | 0.259 |
-| + InstanceNorm + LeakyReLU | 0.820 | 0.329 |
-| + Gaussian Inference | 0.825 | 0.354 |
-
----
-
-## Class Imbalance Experiments
-
-| Method | Mean Dice | Class 4 Dice |
-|---|---|---|
-| Baseline Model | 0.557 | - |
-| Best Model | 0.825 | 0.354 |
-| Foreground-Aware Patching | 0.823 | 0.327 |
-| Class-4-Aware Patching | 0.825 | 0.341 |
-| Data Augmentation | 0.811 | 0.340 |
-| Focal Loss | 0.808 | 0.329 |
-| Final Combined System | 0.815 | 0.363 |
-
----
-
-## Patch Size Ablation
-
-| Patch Size | Mean Dice | GPU Memory |
-|---|---|---|
-| 64 × 64 × 32 | 0.642 | 345 MB |
-| 80 × 80 × 32 | 0.776 | 489 MB |
-| 96 × 96 × 32 | 0.803 | 658 MB |
-
-These experiments demonstrate the trade-off between:
-- spatial context
-- segmentation performance
-- computational cost
 
 ---
 
@@ -199,44 +152,6 @@ This caused severe instability in Dice score evaluation and highlighted limitati
 
 The project therefore focused not only on improving segmentation accuracy, but also on understanding *why* certain classes failed.
 
----
-
-# Example Outputs
-
-## MRI Segmentation Example
-
-
-## Training Curves
-
-
-## Class Imbalance Analysis
-
-
----
-
-
----
-
-# Repository Structure
-
-```text
-3d-medical-image-segmentation/
-│
-├── README.md
-├── report.pdf
-├── requirements.txt
-├── segmentation_training.ipynb
-│
-├── images/
-│   ├── architecture.png
-│   ├── segmentation_example.png
-│   ├── loss_curves.png
-│   └── class_imbalance.png
-│
-└── outputs/
-```
-
----
 
 # Future Improvements
 
