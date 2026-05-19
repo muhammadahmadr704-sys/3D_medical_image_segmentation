@@ -19,7 +19,8 @@ The project was inspired by:
 - 3D U-Net
 - nnU-Net
 
-and focuses heavily on: data centric experimentation-
+and focuses heavily on: 
+-data centric experimentation
 -optimisation stability
 - patch-based volumetric training
 - class imbalance analysis
